@@ -10,7 +10,7 @@ bot = praw.Reddit(user_agent='ActuallyOutputBot',
 subreddit = bot.subreddit('Guitar')
 comments = subreddit.stream.comments()
 
-reply_msg = 'Actually, I think you mean "output jack".'
+reply_msg = 'I think you mean [output jack](https://en.wikipedia.org/wiki/Electric_guitar#Construction).'
 
 for comment in comments:
     text = comment.body
