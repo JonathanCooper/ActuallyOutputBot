@@ -13,7 +13,7 @@ comments = subreddit.stream.comments()
 reply_msg = 'I think you mean [output jack](https://en.wikipedia.org/wiki/Electric_guitar#Construction).'
 
 for comment in comments:
-    text = comment.body
-    if 'input jack' in text.lower():
+    text = comment.body.lower()
+    if 'input jack' in text and 'amp' not in text:
         print 'found a match: {0}'.format(comment.permalink())
         comment.reply(reply_msg)
